@@ -13,10 +13,6 @@ def create_app():
     migrate = Migrate(app, models.db)
 
     # index route
-    @app.route('/')
-    def index():
-        return 'Hello, PetFax!'
-
     from . import main
     app.register_blueprint(main.bp)
 
